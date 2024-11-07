@@ -1,4 +1,4 @@
-
+{
 function removeDuplicates(inputArray:number[]) {
 
     let emptyArray : number[]=[];
@@ -21,3 +21,4 @@ console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
 
 // Sample Output:
 // [1, 2, 3, 4, 5]
+}
