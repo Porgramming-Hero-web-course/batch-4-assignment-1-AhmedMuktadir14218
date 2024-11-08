@@ -1,32 +1,20 @@
-# TypeScript Union and Intersection Types
+Union types and intersection types allow for TypeScript's types to be combined in an expressive and flexible way, better allowing you to specify your types and enable safer and more versatile code.
 
-Union types and intersection types allow TypeScript's types to be combined in an expressive and flexible way, enabling you to specify types better and write safer, more versatile code.
-
-### Union Types (`A | B`)
-Union types are used when a value could be one of multiple types. They allow a variable to hold any of the types specified.
-
-**Example:**
-
-```typescript
+Union Types (A | B): This is used when a value could be one of many types. It lets the variable hold any of the types specified.
+example:
 function display(value: string | number) {
     console.log(value);
 }
-display("Hello"); // Output: Hello
-display(42);      // Output: 42
+console.log("Hello"); 
+console.log(42);  
 
-
-### Intersection Types (`A & B`)
-Intersection types merge multiple types into one, meaning a variable must meet all of the specified types.
-
-**Example:**
-
-```typescript
+Intersection Types (A & B): Merges multiple types into one; a variable must meet all of the types present.
+example:
 interface User {
-    name: string;
+name: string;
 }
 interface Admin {
-    adminLevel: number;
+adminLevel: number;
 }
 type AdminUser = User & Admin;
-
-const admin: AdminUser = { name: "Alice", adminLevel: 1 };
+const admin: AdminUser = { name: "Alice", adminLevel: 1 };  
