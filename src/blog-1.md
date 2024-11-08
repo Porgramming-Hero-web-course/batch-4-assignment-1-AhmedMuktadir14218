@@ -13,3 +13,20 @@ function display(value: string | number) {
 }
 display("Hello"); // Output: Hello
 display(42);      // Output: 42
+
+
+### Intersection Types (`A & B`)
+Intersection types merge multiple types into one, meaning a variable must meet all of the specified types.
+
+**Example:**
+
+```typescript
+interface User {
+    name: string;
+}
+interface Admin {
+    adminLevel: number;
+}
+type AdminUser = User & Admin;
+
+const admin: AdminUser = { name: "Alice", adminLevel: 1 };
